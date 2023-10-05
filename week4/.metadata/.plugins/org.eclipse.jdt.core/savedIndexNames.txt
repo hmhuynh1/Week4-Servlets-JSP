@@ -1,9 +1,0 @@
-INDEX VERSION 1.134+C:\Users\need2\Pictures\eclipse-workspace\week4\.metadata\.plugins\org.eclipse.jdt.core
-3675277764.index
-1865797976.index
-1274218602.index
-330622367.index
-2901526028.index
-2118229419.index
-3236379397.index
-998287220.index
