@@ -11,7 +11,8 @@ private String toppings = "";
 private String size = "";
 private String crust= "";
 private String sauce= "";
-private String name = "";
+private double price = 10;
+private double TAX = 0.07;
 
 
 
@@ -22,7 +23,7 @@ public int getOrderNumber() {
 
 public Pizza() {
 	
-	setSize("Lager");
+	setSize("Large");
 	setCrust("Thin");
 	setToppings("Cheese");
 	nextOrderNumber++;
@@ -30,14 +31,34 @@ public Pizza() {
 	
 }
 
-	public Pizza(String name, String crust, String size, String sauce) {
-	this.name = name;
+	public Pizza(String crust, String size, String sauce) {
 	this.crust = crust;
 	this.size = size;
 	this.sauce = sauce;
 	nextOrderNumber++;
 	orderNumber = nextOrderNumber;
 	
+}
+public double getPrice() {
+	return price;
+}
+
+public void setPrice() {
+	
+	if (size.equals("small")) {
+		price = 10;
+	}
+	else if (size.equals("medium")){
+		price = 15;
+	}
+	else {
+		price = 20;
+	}
+	price = price + getTax();
+}
+
+public double getTax() {
+	return TAX*price;
 }
 
 public String getToppings() {
@@ -74,14 +95,6 @@ public String getSauce() {
 
 public void setSauce(String sauce) {
 	this.sauce = sauce;
-}
-
-public String getName() {
-	return name;
-}
-
-public void setName(String name) {
-	this.name = name;
 }
 }	
 
